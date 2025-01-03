@@ -5,6 +5,7 @@ import './App.css'
 import Navbar from './components/navbar'
 import Footer from './components/Footer'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Signup from './components/Signup'
 
 function App() {
 
@@ -12,13 +13,17 @@ function App() {
     {
       path: "/",
       element: <><Navbar /></>
+    },
+    {
+      path: "/signup",
+      element: <><Navbar /><Signup /></>
     }
   ])
 
   return (
     <>
       <RouterProvider router={router} />
-      <Footer/>
+      <Footer />
     </>
   )
 }
